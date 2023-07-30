@@ -12,7 +12,8 @@
         async function postDatea(url ){
             const response = await fetch(url, {
                 method : 'GET',    // GET,POST,PUT,DELETE,etc
-                headers : {'Authorization': '개인의 REST key'},
+                // headers : {'Authorization': '개인의 REST key'},
+                headers : {'Authorization': "KakaoAK ab44543239760acabf85a55b74860d5*"}
             });
             return response.json();  // parses json response into native javascript objects
         }
