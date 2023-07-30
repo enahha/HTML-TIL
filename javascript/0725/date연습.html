@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{display: grid; place-content: center; padding-top: 250px;}
+        div{width: 200px; height: 200px; text-align: center; border: 5px dotted dodgerblue;}
+    </style>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <h1>공부한 기간</h1>
+            <p><span class="accent" id="result"></span>일이 되었습니다.</p>
+            <p>축하합니다!</p>
+        </div>
+    </main>
+
+    <script>
+        let now = new Date('2023-07-25');   //오늘 날짜
+        let firstDay = new Date('2023-07-10');  //시작한 날짜
+        let diff = now.getTime() - firstDay.getTime();  //오늘까지 지난 시간(밀리초) - 첫날까지 지난 시간(밀리초)
+        let result = Math.abs(diff/(1000*60*60*24));   // 첫날부터 오늘까지 지난 시간
+
+        document.querySelector('.accent').innerText = result;
+    </script>
+</body>
+</html>

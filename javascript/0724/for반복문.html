@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //for문으로 1~5까지 더하기
+        // let sumFor = 0;
+
+        // for(i=1; i<6; i++){   // for(초기값; 조건; 증감식;)
+        //     sumFor += i;
+        // }
+        // document.write(sumFor ,'<br>');
+
+        // //for문을 이용해서 1000까지 더하기
+        // let sum1000 = 0;
+        // for(i=1; i<1001; i++){
+        //     sum1000 += i;
+        // }
+        // document.write(sum1000,'<br>');
+
+        // //for 짝수만 더하기, 홀수만 더하기
+        // let sumsum = 0;
+        // for(i=1; i<=10; i++){
+        //     if(i%2===0){ sumsum += i;}
+        // }
+        // document.write(sumsum);
+
+        // //별찍기
+        // for(let i=0; i<=10; i++){
+        //     for(let j=0; j<=i; j++){
+        //         document.write('*')
+        //     }
+        //     document.write('<br>');
+        // }
+        // 다이아몬드 별찍기
+        for(let i = 0; i < 5; i++)  {
+            for(let j = 4; j > i; j--)  {document.write('&nbsp');}
+            for(let j = 0; j <= i; j++)  {document.write('*');}
+            for(let j = 1; j <= i; j++)  { document.write('*');}
+
+            document.write('<br>');
+        }
+
+
+
+    </script>
+</body>
+</html>

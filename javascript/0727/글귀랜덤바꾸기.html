@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gamja+Flower&family=Nanum+Pen+Script&family=Orbit&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Nanum Pen Script', cursive;
+            display: grid;
+            place-content: center;
+        }
+        p{font-size: 50px;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    
+    <script>
+        const data =[];
+        data[0] = "당신이 할 수 있는 가장 큰 모험은 당신이 꿈꾸는 삶을 사는 것이다";
+        data[1] = "성공한 사람들은 어느 일에나 항상 실패의 가능성이 있다는 사실을 알고 있다.그들은 실패를 두려워하지 않는 태도로 의연하다.";
+        data[2] = "잘못된 점만 찾지 말고 그것을 고칠 수 있는 방법을 찾아라.";
+        data[3] = "자기의 능력이나 실력은 생각하지 않고, 단숨에 몇 계단을 뛰어 올라가려는 사람은 성공하지 못한다";
+        data[4] = "오늘 당신은 평생의 목표에 도달하는데 도움이 되는 무슨 일을 하였는가?";
+        data[5] = "인생은 속도가 아니라 방향이다.";
+        data[6] = "감사의 말을 하는 것이 가장 먼저 해야 할 의무이다.";
+        data[7] = "나의 관심은 미래에 있다. 그것은 내 삶의 나머지 부분을 미래에서 보내야 하기 때문이다.";
+        data[8] = "성장은 뜻밖의 어둠 속에서도 도약할 때 이루어진다.";
+        data[9] = "사람은 천사도 아니고 짐승도 아니다. 그런데 불행한 것은 천사처럼 행세하려는 사람이 짐승처럼 행세하는 것이다.";
+        data[10] = "끝까지 해보기 전까지는 늘 불가능해 보인다.";
+
+
+        function randomValueFromArray(array) {
+                const random = Math.floor(Math.random() * array.length);
+                return array[random];
+        }
+        let font = randomValueFromArray(data);
+        document.querySelector('.box').innerHTML = '<p>&quot;' + font + '&quot;</p>';  // funtion안으로 들어가면 왜 실행이 안되는거..?
+
+        setInterval('randomValueFromArray(data)',3000);
+
+    </script>
+</body>
+</html>

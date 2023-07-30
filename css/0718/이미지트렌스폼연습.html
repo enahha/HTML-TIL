@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 트랜스폼 연습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(226, 215, 233);
+        }
+        .title{
+            font-size: 35px;
+            padding: 30px 40px;
+        }
+        .box-area{
+            display: flex;
+            justify-content: space-around;
+        }
+        .box{
+            width: 400px;
+            height: 750px;
+            border-radius: 18px;
+            background-color: white;
+            box-shadow: 20px 10px 10px 1px rgb(129, 129, 129);
+        }
+        .box:hover{
+            transform: translatey(-10px);
+        }
+        .txt1{
+            font-size: 30px;
+            padding-top: 50px;
+            padding-left: 30px;
+            padding-bottom: 35px;
+        }
+        .txt2{
+            font-size: 24px;
+            padding-left: 30px;
+            padding-bottom: 35px;
+        }
+        .txt3{
+            font-size: 20px;
+            padding-left: 30px;
+            padding-bottom: 35px;
+            opacity: 0.5;
+
+        }
+        .txt4{
+            font-size: 18px;
+            padding-left: 30px;
+            padding-bottom: 35px;
+
+        }
+        img{
+            width: 400px;
+            height: 450px;
+        }
+        @media screen and (max-width:768px){
+            .box-area{
+                flex-direction: column;
+            }
+            .box{
+                margin: 30px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p class="title">
+        국민과 함께 성장하는 <strong>글로벌 주택금융 리더</strong>
+    </p>
+    <div class="box-area">
+        <div class="box">
+            <div class="txt-area">
+                <p class="txt1"><strong>아낌e-보금자리론</strong></p>
+                <p class="txt2"><strong>0.1%p 더 저렴한 금리</strong></p>
+                <p class="txt3">최대</p>
+                <p class="txt4"><strong>주택가격 6억원</strong></p>
+            </div>
+            <img src="/0718/images/679_600+ Ilustraciones De Arquitectura Ilustraciones, gráficos vectoriales libres de derechos y clip art.jpeg">
+        </div>
+        <div class="box">
+            <div class="txt-area">
+                <p class="txt1"><strong>아낌e-보금자리론</strong></p>
+                <p class="txt2"><strong>0.1%p 더 저렴한 금리</strong></p>
+                <p class="txt3">최대</p>
+                <p class="txt4"><strong>주택가격 6억원</strong></p>
+            </div>
+            <img src="/0718/images/679_600+ Ilustraciones De Arquitectura Ilustraciones, gráficos vectoriales libres de derechos y clip art.jpeg">
+        </div>
+        <div class="box">
+            <div class="txt-area">
+                <p class="txt1"><strong>아낌e-보금자리론</strong></p>
+                <p class="txt2"><strong>0.1%p 더 저렴한 금리</strong></p>
+                <p class="txt3">최대</p>
+                <p class="txt4"><strong>주택가격 6억원</strong></p>
+            </div>
+            <img src="/0718/images/679_600+ Ilustraciones De Arquitectura Ilustraciones, gráficos vectoriales libres de derechos y clip art.jpeg">
+        </div>
+    </div>
+</body>
+</html>

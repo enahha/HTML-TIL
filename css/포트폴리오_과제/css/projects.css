@@ -1,0 +1,98 @@
+.project{
+width: 100%;
+height: 100vh;
+margin: 0 auto;
+background-color: #cca78c;
+}
+.project-container{
+height: 60px;
+padding: 50px;
+display: grid;
+place-content: center;
+text-align: center;
+}
+.discription a{
+    text-decoration: none;
+    color: rgb(5, 95, 58);
+}
+hr{
+width: 60px;
+height: 3px;
+margin: 5px 28px;
+background-color: black;
+}
+.imgslide{
+width: 98%;
+height: 70vh;
+overflow: hidden;
+}
+.skillbox ul{
+display: flex;
+justify-content: flex-start;
+padding: 10px 60px;
+list-style: none;
+width: 3000px;
+height: 450px;
+}
+.skillbox li{
+float: left;  
+/*오른쪽으로 붙을 수 있게*/
+}
+
+ul .discription{
+width: 700px;
+height: 450px;
+padding: 0px 25px;
+font-size: 32px;
+}
+.discription i{
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+/*input 버튼과 bullets를 연결할 것임로 input버튼은 안보이게 해준다*/
+.imgslide input{
+display: none;
+}
+/*불릿 라벨 버튼의 기본 설정*/
+.bullets{
+position: relative;
+top: 10%;
+left: 50%;
+z-index: 2;
+}
+.bullets label{
+display: inline-block;
+border-radius: 50%;
+background-color: rgba(0,0,0,0.55);
+width: 20px;
+height: 20px;
+cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 불릿라벨과 input 버튼의 연결 */
+.imgslide input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+background-color: #fff;
+}
+.imgslide input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+background-color: #fff;
+}
+.skillbox li:nth-child(1){
+background: url(../images/미리캔버스.jpg) no-repeat;
+background-size:cover;
+width: 600px;
+height: 450px;
+}
+
+.skillbox li:nth-child(3){
+background: url(../images/블루보틀.jpg) no-repeat;
+background-size: cover;
+width: 600px;
+height: 450px;
+}
+#slide1:checked~ .skillbox{
+transform: matrix(1,0,0,1,0,0);
+}
+#slide2:checked~ .skillbox{
+transform: matrix(1,0,0,1,-1370,0);
+/*순서 : matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY());*/
+}

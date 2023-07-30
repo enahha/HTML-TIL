@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let numbers = [2,4,6,8,10];
+
+        let sum = 0
+        for(let i=0; i<numbers.length; i++){
+            sum += numbers[i];
+        }
+
+        //결과요소를 배열 끝에 추가
+        numbers.push(sum);
+        showarray(numbers);
+
+        function showarray(arr){
+            let str = '<table><tr>'
+                for (let i=0; i<arr.length; i++){
+                    str += '<td>' + arr[i] +'</td>';
+                }
+                str += '</tr></table>'
+                document.write(str);
+        }
+    </script>
+</body>
+</html>

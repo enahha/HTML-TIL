@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3,2fr);
+            grid-template-rows: repeat(4,300px);
+
+            grid-template-areas: 
+                "box1 box1 box2"
+                "box3 box4 box2"
+                "box5 box4 box6"
+                "box5 box7 box7"
+            ;
+        }
+        .box1{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box1;
+        }
+        .box2{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box2;
+        }
+        .box3{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box3;
+        }
+        .box4{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box4;
+        }
+        .box5{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box5;
+        }
+        .box6{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box6;
+        }
+        .box7{
+            background: url(../0718/images/woman-g289d7d936_1920.jpg);
+            border: 1px solid;
+            grid-area: box7;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-Btn{
+            width: 150px; padding: 10px 40px; background-color: aliceblue;
+        }
+        .tab-content{
+            border: 1px solid;
+            width: 420px;
+            padding: 20px;
+            display: none;
+        }
+        .tab-Btn.active{
+            background-color: rgb(209, 122, 9);
+        }
+        .tab-content.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-Btn" onclick="openTab(event,'tab1')">탭1</button>
+        <button class="tab-Btn" onclick="openTab(event,'tab2')">탭2</button>
+        <button class="tab-Btn" onclick="openTab(event,'tab3')">탭3</button>
+    </div>
+
+    <div id="tab1" class="tab-content">
+        <h3>탭1의 제목</h3>
+        <pre>1111111탭내용용용</pre>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h3>탭2의 제목</h3>
+        <pre>1222221탭내용용용</pre>
+    </div>
+    <div id="tab3" class="tab-content">
+        <h3>탭3의 제목</h3>
+        <pre>1333333내용용용</pre>
+    </div>
+
+    <script>
+        function openTab(evt, tabName){   //evt, tabMame == 매개변수
+            const tabContent = document.querySelectorAll('.tab-content');
+            for(const content of tabContent){
+                content.style.display = 'none';   // 모든 탭이 안보이게
+            }
+
+            //모든 탭 버튼에서 active 클래스를 제거
+            const tabBtns = document.querySelectorAll('tab-Btn');
+            for(const button of tabBtns){
+                button.classList.remove('active');
+            }
+            //선택한 탭 내용을 보여주고 active클래스를 추가
+            document.getElementById(tabName).style.display = 'block';
+            evt.currentTarget.classList.add('active');
+        }
+
+        // document.getElementById('tab1').style.display = 'block';  //페이지 열리면 첫번째 탭이 보이게
+    </script>
+</body>
+</html>

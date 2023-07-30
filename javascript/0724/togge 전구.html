@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 300px;
+        }
+        .off{
+            display: block;
+        }
+        .on{
+            display: none;
+        }
+        .off.active{
+            display: none;
+        }
+        .on.active{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>전구스위치</h1>
+    <img src="./images/off.jpeg" class="off">
+    <img src="./images/on.jpeg" class="on">
+    <button class="onoffBtn">Turn on/off the light</button>
+
+    <script>
+    const $onoffBtn = document.querySelector('.onoffBtn');
+    const $off = document.querySelector('.on');
+    const $on = document.querySelector('.off');
+    
+
+    $onoffBtn.addEventListener('click', () => {
+        $off.classList.toggle('active');
+        $on.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

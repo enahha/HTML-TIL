@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션 속성</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            background-color: antiquewhite;
+            border: 1px solid;
+            transition-property: width, height;   /*트랜지션 대상*/
+            transition-delay: 1s;  /*지연 시간*/
+            transition-duration: 2s, 1s;   /*실행시간: 너비2초, 높이1초*/
+            transition-timing-function: ease-in;
+        }
+        .box1:hover{
+            width: 300px;
+            height: 300px;
+        }
+        .box2{
+            margin:100px;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            transition: 2s ease-in-out;     /*속성, 실행시간, 실행형태, 지연시간을 한번에 쓸 수 있다.*/
+        }
+        .box2:hover{
+            width: 250px;
+            height: 250px;
+            background-color: orange;
+            transform: rotate(90deg);
+        }
+        /*trandition-timing-function*/
+        #ex div{
+            width: 100px;
+            height: 50px;
+            margin: 5px 10px;
+            background-color: blueviolet;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+        }
+        #ex:hover{
+            height: 400px;
+        }
+        #ex .ease{
+            transition: 3s ease;   /*처음에는 천천히 시작 점점 빨라지다 마지막에 천천히 끝냄 기본값*/
+        }
+        #ex .linear{
+            transition: 3s linear;  /*시작부터 끝까지 똑같은 속도로 진행*/
+        }
+        #ex .in{
+            transition: 3s ease-in;   /*느리게 끝*/
+        }
+        #ex .inout{
+            transition: 3s ease-in-out;   /**느리게 시작하고 느리게 끝*/
+        }
+        /* cubic-benzier(n,n,n,n) : 배지 함수 정의 n값을 0~1사이 사용 */
+    </style>
+</head>
+<body>
+    <h2>트랜지션 속성 367쪽</h2>
+    <p>웸 요소의 배경색이 바뀌거나 도형의 태두리가 원형으로 바뀌는 등 스타일 속성이 바뀌는 것을 말한다.</p>
+    <div class="box1">box</div>
+    <div class="box2">box</div>
+<hr>
+    <h2>trandition-timing-function : 속도 곡선 속성 값 371쪽</h2>
+    <div id="ex">
+        <div class="ease">ease 기본</div>
+        <div class="linear">liner</div>
+        <div class="in">in</div>
+        <div class="out">out</div>
+        <div class="inout">inout</div>
+    </div>
+</body>
+</html>

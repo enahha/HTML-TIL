@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .check{cursor: pointer;}
+    </style>
+</head>
+<body>
+    <h3> ✓ 클릭해보세요 ✓</h3>
+        <h5>할 일 목록</h5>
+        <ul>
+            <!--기호같은 걸 넣고 싶을 때 엔티티코드를 사용해 넣음-->
+            <li><span class="check">&check; 할 일 1</span></li>
+            <li><span class="check">&check; 할 일 2</span></li>
+            <li><span class="check">&check; 할 일 3</span></li>
+            <li><span class="check">&check; 할 일 4</span></li>
+            <li><span class="check">&check; 할 일 5</span></li>
+        </ul>
+
+        <script>
+            //All은 같은 이름의 class을 이용해서 모든 클래스를 선택
+            let listB = document.querySelectorAll('.check');
+
+            for(let i=0; i<listB.length; i++){
+                listB[i].addEventListener('click', ()=>{
+                    listB[i].parentNode.style.color = '#ccc';
+                    listB[i].parentNode.style.textDecoration ='line-through';   //글씨에 줄 긋기
+                    // this.style.color = 'blue';
+                    // this.style.backgroundColor = 'lightgray';
+                    // this.style.fontSize ='20px'
+                })
+            }
+        </script>
+</body>
+</html>

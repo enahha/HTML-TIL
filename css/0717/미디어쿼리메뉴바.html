@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 - 반응형</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            height: 70px;
+            background-color: bisque;
+            padding-top: 15px;
+        }
+        .logo{
+            cursor: pointer;
+            color: blue;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            /* flex-direction: column;     만약 세로로 정렬하고 싶으면*/
+        }
+        li{
+            padding: 0 15px;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        .logologo{
+            color: blueviolet;
+        }
+        /*창 크기 가로가 768이하일 때*/
+        @media screen and (max-width: 768px){
+            .navbar ul {
+                flex-direction: column;
+            }
+            nav{
+                height: 170px;
+                /* align-items: flex-start; */
+            }
+            .navbar ul li {
+                line-height: 2;  /*줄어들었을때 글씨 자간을 넓여줌*/
+            }
+            .appo{
+                display: none;   /*줄어들었을 때 안보이게 해준다*/
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+       <a href="index.html" class="logologo"><h1>logo</h1></a>  <!--홈페이지의 메인화면은 index.html로 해줘야함-->
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="icons">
+        <ul>
+            <li><a href="#">icone</a></li>
+            <li><a href="#">icone</a></li>
+            <li class="appo"><a href="#">appointment</a></li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>

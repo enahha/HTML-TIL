@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총 주문가격 확인</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .container {width: 500px; height: 400px; background-color: rgb(255, 255, 255); margin: 15px; border-radius: 12px; box-shadow: 0px 1px 11px 2px; padding: 25px;}
+        h1{text-align: center; padding: 15px; color: rgb(9, 9, 91);}
+        .a{width: 490px; height: 50px;}
+        .b{width: 490px; height: 200px;}
+        .c{height: 50px;}
+        .tot{margin-left: 30px;}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>총주문가격확인</h1>
+        </div>
+        <form name="main">
+            <fieldset class="a">
+                <legend>기본가격</legend>
+                <p>30000원</p>
+            </fieldset>
+        </form>
+        <form name="addPrice">
+            <fieldset class="b">
+                <legend>추가주문</legend>
+                <label for="add1"><input type="checkbox" class="checkbox" id="add1" name="add1" value="1200">기장추가(1200원)</label>
+                <label for="add2"><input type="checkbox" class="checkbox" id="add2" name="add2" value="3000">배송 비용(3000원)</label>
+                <label for="add3"><input type="checkbox" class="checkbox" id="add3" name="add3" value="800">산간지역 추가 비용(800원)</label>
+                <label for="add4"><input type="checkbox" class="checkbox" id="add4" name="add4" value="4800">양말(2개, 4800원)</label>
+                <label for="add5"><input type="checkbox" class="checkbox" id="add5" name="add5" value="2400">선물 포장(2400원)</label>
+            </fieldset>
+        </form>
+        <form name="tot">
+            <fieldset class="c">
+                <legend>합계</legend>
+                <input type="text" class="tot" value="30000">
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        let price = 30000;
+        let total = document.querySelector('.tot');
+        let addPrices = document.querySelectorAll('.checkbox');
+
+        for(let i=0; i<addPrices.length; i++){
+            addPrices[i].onclick = function(){
+                if(this.checked == true){
+                    price += parseInt(this.value);   //합계가격 계산
+                }else{price -= parseInt(this.value);   //radio버튼으로 구현하면 한개만 체크되기때문에 구현이 불가능하다
+                }
+                total.value = price + '원'
+            }   }
+    </script>
+</body>
+</html>

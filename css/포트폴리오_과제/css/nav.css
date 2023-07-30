@@ -1,0 +1,52 @@
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(31, 31, 31, 0.793);
+    position: fixed;
+    top:0;
+    z-index: 1;
+
+}
+.navbar .barwidth{
+    display: flex;
+    justify-content: space-between;
+}
+.homebtn{
+    position: absolute;
+    top: 30%;
+    margin-left: 69px;
+}
+.home a{
+    text-align: center;
+    place-items: left;
+    color: white;
+    cursor: pointer;
+}
+.home ul{
+    position: absolute;
+    right: 1%;
+    top: 17%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-btn{
+    padding: 0px 50px;
+}
+.menu-btn a:hover{ 
+    color: rgba(220, 141, 44, 0.8);
+}
+/*창 크기 가로가 768이하일 때*/
+@media screen and (max-width: 768px){
+    /* .home ul{
+        flex-direction:row;
+    } */
+    .navbar{
+        height: 80px;
+        /* align-items: flex-start; */
+    }
+    .home ul li {
+        line-height: 2;  /*줄어들었을때 글씨 자간을 넓여줌*/
+        padding: 0px 20px;
+    }
+}

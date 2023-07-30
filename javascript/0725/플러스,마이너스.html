@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{height: 100px; width: 100px;}
+        div{font-size: 50px; text-align: center;}
+        a{font-size: 45px; margin: 10px; text-decoration: none; color: red;}
+    </style>
+</head>
+<body>
+    <main>
+        <a href="#" id="btnPlus"> +</a>
+        <a href="#" id="btnMinus"> - </a>
+        <div class="inText"></div>
+    </main>
+
+    <script>
+        const $btnPlus = document.getElementById('btnPlus');
+        const $btnMinus = document.getElementById('btnMinus');
+        let $inText = document.querySelector('.inText');
+        let num = 0;   //제어할 숫자를 0으로
+
+        //+ 를 클릭할 때 마다
+        $btnPlus.addEventListener('click', e =>{
+            e.preventDefault();  //새로고침 방지
+            num++;  //1씩 증가
+            console.log(num);
+            $inText.innerText = num;
+        })
+        //-를 클릭할 대 마다
+        $btnMinus.addEventListener('click', e =>{
+            e.preventDefault();  //새로고침 방지
+            num--;
+            console.log(num);
+            $inText.innerText = num;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>툴팁효과</title>
+    <style>
+        .tooltip{
+            cursor: pointer;
+        }
+        .tooltip-content{
+            visibility: hidden;     /**/
+            background-color: antiquewhite;
+            width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            font-weight: 800;
+            text-align: center;
+        }
+       
+        .tooltip:hover .tooltip-content{
+            visibility: visible;       /*바깥쪽 div에 마우스를 올렸을 떄 안 쪽 div가 보인다*/
+        }
+    </style>
+</head>
+<body>
+    <h1>툴팁효과</h1>
+<p></p>visibility 속성은 화면에서 감추가미나 할 뿐 원래 요소가 있는 공간은 그대로 차지하지만,<br>
+dixplay:none; 은 아예공간을 차지하지 않는다.
+display:block;</p>
+
+<div class="tooltip">
+    <span> 여기에 마우스를 올려보세요!</span>
+    <div class="tooltip-content">
+        <p>마우스를 올려야 나타나는 툴팁부분</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{width: 200px; height: 200px; background-color: rgb(53, 99, 84); position: absolute; top: 100px; left: 300px;}
+    </style>
+</head>
+<body>
+    <button class="leftTurn" onclick="lTurn()">왼쪽으로 회전</button>
+    <button class="RightTurn" onclick="rTurn()">오른쪽으로 회전</button>
+    <div class="sq"></div>
+
+    <script>
+        let $sq = document.querySelector('.sq');
+        let $leftTurn = document.querySelector('.leftTurn');
+        let $RightTurn = document.querySelector('.RightTurn');
+        var num= 0;
+// rotate, scale,translage 등 더 있다.
+        $leftTurn.addEventListener('click', e => {
+            num += 20;
+            $sq.style.transform = `rotate(${num}deg)`;})
+        
+        $RightTurn.addEventListener('click', e =>{
+            num -= 20;
+            $sq.style.transform = `rotate(${num}deg)`;})
+
+        //onclick 으로 하기.
+        // function lTurn(){
+        //     num += 20;
+        //     $sq.style.transform = `rotate(${num}deg)`;
+        // }
+        // function rTurn(){
+        //     num-=20;
+        //     $sq.style.transform = `rotate(${num}deg)`;
+        // }
+        
+
+    </script>
+</body>
+</html>

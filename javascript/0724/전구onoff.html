@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+        }
+        img {
+            width: 100%;
+            display: none;
+        }
+        button {
+            display: inline-block;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="./images/off.jpeg" id="turnoff">
+        <img src="./images/on.jpeg" id="turnon">
+    </div>
+    <button id="turnonbtn">turn on</button>
+    <button id="turnoffbtn">turn off</button>
+
+    <script>
+        const $turnoff = document.querySelector('#turnoff');
+        const $turnon = document.querySelector('#turnon');
+        const $turnoffbtn = document.querySelector('#turnoffbtn');
+        const $turnonbtn = document.querySelector('#turnonbtn');
+        const $togglebtn = document.querySelector('#togglebtn');
+        // $togglebtn.addEventListener('click', function() {
+        //     $turnoff.classList.toggle('active');
+        //     $turnon.classList.toggle('active');
+
+        // });
+        $turnonbtn.addEventListener('click', function() {
+            $turnoff.classList.remove('active');
+            $turnon.classList.add('active');
+
+        });
+        $turnoffbtn.addEventListener('click', function() {
+            $turnon.classList.remove('active');
+            $turnoff.classList.add('active');
+
+        });
+
+        // function imageSet(btn) {
+        //     let imagesrc;
+        //     if(btn=="off") {
+        //         imagesrc = "./images/off.jpeg";
+        //     } else if (btn=="on") {
+        //         imagesrc = "./images/on.jpeg";
+        //     }
+        // }
+
+    </script>
+</body>
+</html>

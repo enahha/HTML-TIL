@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지를 클릭하면 나오게</title>
+</head>
+<body>
+    <h2>DOM요소에 함수 직접 연결하기</h2>
+    <p>
+        문서 객체 모델 DOM
+        자바스크립트를 이용하여
+        웹문서에 접근하고 제어할 수 있도록 
+        객체를 사용해 웹문서를 체계적으로 정리하는 방법
+    </p>
+    <img src="https://cdn.pixabay.com/photo/2023/07/12/07/07/cat-8121892_1280.jpg" id="pic">
+
+    <script>
+        let $pic = document.querySelector('#pic');
+        // let $pic = document.getElementById('pic');
+        $pic.onclick = function(){    // function 이름이 없어서 '익명함수'라고 한다
+            alert('이미지를 클릭했습니다.');
+        }
+    </script>
+</body>
+</html>

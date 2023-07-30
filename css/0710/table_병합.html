@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table{
+            width: 500xp;
+        }
+        th,td{
+            width: 500xp;
+        }
+    </style>
+</head>
+<body>
+    <table border>   <!--원래 테이블을 나타낼려면 css를 이용해 띄어줘야 하지만 임시방편으로 border사용 -->
+        <caption>제목을 나타내는 태그 caption</caption>
+        <colgroup> <!-- 열 전체서식 변경할 수 있는 태그-->
+            <col style="background-color: #eee;">     <!-- 첫 번쨰 열의 배경색 지정-->
+            <col>                                       <!-- 스타일이 없어도 표시해줘야 함-->
+            <col style="width: 150px;">                 <!-- 세,네번째 열의 너비 지정-->
+            <col style="width: 150px;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th> <th colspan="2">설명,위치</th> <th>/</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td> <td colspan="2">표의 제목을 생성 위치는 표의 위 중앙에 표시</td> <td>연습</td>
+            </tr>
+            <tr>
+                <td>1</td> <td colspan="2">표의 제목을 생성 위치는 표의 위 중앙에 표시</td> <td>연습</td> <td>연습</td>
+            </tr>
+        </tbody>
+    </table>
+    <dl>
+        <dd>colspan : 열을 합칠 때 사용</dd>
+        <dd>rowspan : 행을 합칠 때 사용</dd>
+    </dl>
+</body>
+</html>

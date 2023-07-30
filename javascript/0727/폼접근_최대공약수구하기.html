@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{width: 100%; display: flex; justify-content: center; padding-top: 50px;}
+        h1{font-size: 30px; padding: 25px;}
+        
+    </style>
+</head>
+<body>
+    <div>
+    <!-- 최대공약수 구하기 -->
+    <h1>최대공약수 구하기</h1>
+        <p>*두 수를 입력한 후 [게산하기]를 클릭하세요*</p>
+        <form>
+            <label><input type="text" id="numberOne" name="numbox"></label>
+            <label><input type="text" id="numberTwo" name="numbox"></label>
+            <button id="calBtn">계산하기</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        //각 입력값을 변수로 가져온다
+        // result 변수에는 결과 겂을
+        let n = document.getElementById('numberOne');
+        let m = document.getElementById('numberTwo');
+        const button = document.getElementById('calBtn');
+        let result = document.getElementById('result');
+
+        //클릭하면 합수 실행
+        button.onclick = function(event){
+            event.preventDefault();
+            result.innerText = getGCD(n.value, m.value);
+        }
+
+        //받아온 두 값 비교 getGCD(변수1 n , 변수2 m )
+        // 나누어서 나머지 0이 되도록 모두 && (and연산자) 그리고 모두 참이여야함 를  사용해 작성
+        function getGCD(n,m){
+            let max = n > m ? n : m;  //최대값 max에 대입
+            let GCD = 0;
+            for (let i = 1; i<=max; i++){
+                if(n % i === 0 && m % i ===0){
+                    GCD = i;
+                }
+            }
+            return GCD;
+        }
+    </script>
+</body>
+</html>

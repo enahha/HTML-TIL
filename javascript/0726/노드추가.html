@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공부할 주제</title>
+</head>
+<body>
+    <div id="container">
+        <h1>공부할 주제</h1>
+        <p>공부할 내용을 기록해 보세요.</p>
+        <form>
+            <input type="text" id="subject" autofocus>
+            <button onclick="newRegister(); return false;"> ADD </button>
+             <!-- return false;는 버튼 기능은 submit 역할을 취소함.
+            입력해주지 않으면 함수를 실행하기 전에 기본 기능을 먼저함 -->
+            <hr>
+            <ul id="itemList">
+
+            </ul>
+        </form>
+    </div>
+
+    <script>
+        function newRegister(){
+            let newItem = document.createElement('li');  // 요소 노드 추가
+            let $subject = document.querySelector('#subject');   //텍스트노드는 입력된 값을 가져와야한다 (input으로 가져옴) 폼의 input의 id를 받음 개발자 창가서 subject.value확인하기
+            let newText = document.createTextNode(subject.value);   //텍스트 필드의 값을 텍스트 노드로 만들기
+            newItem.appendChild(newText);   // 텍스트 노드를 요소 노드의 자식 노드로 추가(연결)
+
+            // 이제 보여주기 (부모노드 연결)
+            let $itemList = document.querySelector('#itemList');  // 웹문서에서 부모 노드 가져오기
+            $itemList.insertBefore(newItem, $itemList.childNodes[0]);    //추가된 내용이 위에쪽에 입력됨
+            // $itemList.appendChild(newItem);   // 추가된 내용이 아래쪽에 입력됨.
+
+            $subject.value = '';  //폼의 텍스트 필드값 지워지게 하기
+        }
+    </script>
+</body>
+</html>

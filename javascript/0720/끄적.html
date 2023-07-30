@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <input type="tezt" name="name" id="nameIn" placeholder="enter yort name">
+        <input type="number" name="num" id="number" placeholder="Number">
+        <input type="submit" name="submit" id="submit">
+        <label for="submit">결과보기</label>
+    </form>
+
+    <script>
+        let name = document.querySelector('#nameIn');
+        let resultBtn = document.querySelector('#number');
+        resultBtn.onclick = result;
+
+        function result(){
+            document.querySelector('#num')
+        }
+    </script>
+</body>
+</html>

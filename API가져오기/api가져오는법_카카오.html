@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 카카오 오픈 API 가져오기 https://devlopers.kakao.com/
+        async function postDatea(url ){
+            const response = await fetch(url, {
+                method : 'GET',    // GET,POST,PUT,DELETE,etc
+                headers : {'Authorization': '개인의 REST key'},
+            });
+            return response.json();  // parses json response into native javascript objects
+        }
+
+        postData('https://dapi.kakao.com/v2/search/web?query=뉴스')
+        .then((dats) => {
+            console.log(data);   // JSOM data parsed by 'data.json()' call
+        });
+    </script>
+</body>
+</html>

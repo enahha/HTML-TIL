@@ -1,0 +1,57 @@
+img{
+    height: 100%;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+.aboutme {
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.title-container{
+    height: 60px;
+    padding: 50px;
+    display: grid;
+    place-content: center;
+
+}
+hr{
+    width: 60px;
+    height: 3px;
+    margin: 5px 28px;
+    background-color: black;
+}
+.me-img{
+    height: 260px;
+    background-color: #b9b2ba4c;
+    display: grid;
+    place-content: center;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+.profile, .rightbox{
+    width: 50%;
+    height: 270px;
+}
+.profile h1,.rightbox h1{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.profile ul {
+    padding: 10px 30px;
+}
+ul li{
+    font-size: 18px;
+    font-family: 'Orbit', sans-serif;
+    padding: 10px 22px;
+    list-style: none;
+}
+p{
+    font-size: 16px;
+    font-family: 'Orbit', sans-serif;
+    padding: 10px 22px;
+    line-height: 30px;
+}

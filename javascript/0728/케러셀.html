@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표를 눌러 다음 이미지 보여주기  (오른쪽 마우스 클릭금지, 드래그 금지)</title>
+    <style>
+        body{
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            height: 100vh;
+        }
+        #container{
+            width: 600px; height: 300px; border: 2px solid gainsboro; 
+            display: flex; justify-content: space-between; align-items: center;/*화살표 양 옆 중앙으로*/
+        }
+        .arrow{
+            z-index: 100;  /*맨 위로 올라오게*/
+            font-size: 2em; padding: 10px; background-color: rgba(173, 216, 230, 0.8); color: black; opacity: 0.2;}
+        .arrow:hover{cursor: pointer; opacity: 1;} 
+    </style>
+</head>
+<body>
+    <h3>다음을 눌러 다른 이미지 보이기</h3>
+
+    <div id="container">
+        <div class="arrow" id="left"> &lang; </div>  <!--유니코드 사용-->
+        <div class="arrow" id="right"> &rang; </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('#container');  // 사진 영역
+        const pics = ["pic-1.jpg", "pic-2.jpg", "pic-3.jpg", "pic-4.jpg", "pic-5.jpg"];
+
+        container.style.backgroundImage = `url(images/${pics[0]})`;  //첫번째 이미지 바로 보이게
+        const arrows = document.querySelectorAll('.arrow');
+
+        let i = 0;  //배열 인덱스  for문에서는 안에서 선언을 하지만 forEach문은 밖에서 선언을 해야한다
+        // forEach() : 배열의 요소를 가져와서 함수 실행해야 할 때 편리하게 사용할 수 있다. for랑 비슷
+        arrows.forEach(arrow => {
+            arrow.addEventListener('click', (e)=> {
+                if(e.target.id === 'left'){  // 왼쪽 화살표 클릭인가? id로 구분했음
+                    i--;    // 이전 이미지로 이동
+                    if(i<0){ i = pics.length-1; }   // 맨 마지막 이미지로 이동 🟡 만약 i가 0 이하가 되면 전체 이미지가 5개 이면 5-1 =4로 이동이면 마지막으로 이동이 됨
+                }else if (e.target.id === 'right'){   // 오른쪽 화살표 클릭
+                    i++;
+                    if(i >= pics.length){i = 0 ;}     // 만약  if( i > pics.length) 이렿게 쓰면 i 가 0보다 작아지게 되니까 공백이 하나 나온다.
+                }
+                container.style.backgroundImage = `url(images/${pics[i]})`;  // 현재 이미지를 표시하라
+            });
+        });
+
+        // 마우스 오른쪽 비활성화
+        window.addEventListener('contextmenu', e=>{
+            e.preventDefault();
+            alert('오른쪽 버튼을 사용할 수 없습니다.')
+        });
+        //드래그 방지
+    </script>
+</body>
+</html>

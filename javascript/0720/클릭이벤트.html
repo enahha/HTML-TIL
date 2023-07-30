@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            display: inline;
+            border: 2px dashed gray;
+            padding: 0px 20px;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        #result{
+            border: 1px solid;
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            position: absolute;
+            top:100px;
+            left: 80px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#" onclick="changeBt('green')">Green</a>   <!--onclik="함수명()"-->
+        </li>
+        <li>
+            <a href="#" onclick="changeBt('orange')">orange</a>
+        </li>
+        <li>
+            <a href="#" onclick="changeBt('purple')">purple</a>
+        </li>
+        
+    </ul>
+    <!-- 결과창 -->
+    <div id="result"></div>
+
+    <script>
+        function changeBt(color){
+            let result = document.querySelector('#result')
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

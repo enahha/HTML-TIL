@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parents1{
+            display: grid;
+            /*화면을 꽉 채울 만큼 컬럼 너비를 늘려서 표시*/
+            grid-template-columns: repeat(auto-fix,minmax(100px,1fr));
+        }
+        .parents2{
+            display: grid;
+            /*컬럼의 최소 너비 만크만 채워서 표시*/
+            grid-template-columns: repeat(auto-fix,minmax(100px,1fr));
+        }
+        .box{
+            padding: 15px;
+        }
+        .box:nth-child(odd){
+            background-color: lightblue;
+        }
+        .box:nth-child(even){
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h3>auto fit일 떄</h3>
+    <p>화면이 넓을 때에느 남는 공간 없이 꽉 채워서 컬럼 표시</p>
+    <div class="parents1">
+        <div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis pur</div>
+        <div class="box">. Pulvinar elementum integer enim neque volutpat ac.</div>
+        <div class="box">lis a cras semper auctor. Libero id faucibus nisl tincidunt eget. Leo a diam sollicitudin tempor id. A lacus vestibulum sed arcu non odio euismo</div>
+        <div class="box">cilisis. Nisi scelerisque </div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+    </div>
+    <h3>auto fill일 떄</h3>
+    <p>컬럼의 최소 너비200px만 표시하고 남는 공간 그대로 둔다 </p>
+    <div class="parents2">
+        <div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis pur</div>
+        <div class="box">. Pulvinar elementum integer enim neque volutpat ac.</div>
+        <div class="box">lis a cras semper auctor. Libero id faucibus nisl tincidunt eget. Leo a diam sollicitudin tempor id. A lacus vestibulum sed arcu non odio euismo</div>
+        <div class="box">cilisis. Nisi scelerisque </div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+        <div class="box">box5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+.skills{
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: #ffffff;
+    
+    }
+.skills-container{
+    height: 60px;
+    padding: 50px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+} 
+hr{
+    width: 60px;
+    height: 3px;
+    margin: 5px 28px;
+    background-color: black;
+}
+#containergraph{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 5%;
+}
+/* statistics start */
+.graph{
+background-color:#e2dfdf;
+height: 100vh;
+border-radius: 40px;
+margin:50px;
+    }
+    
+@keyframes stack1{
+0%{ height: 0; opacity:0;}
+100%{ height: 50%; opacity:1;}
+}
+@keyframes stack2{
+0%{ height: 0; opacity:0;}
+100%{ height: 50%; opacity:1;}
+}
+@keyframes stack3{
+0%{ height: 0; opacity:0;}
+100%{ height: 50%; opacity:1;}
+}
+#containergraph{
+    display:flex;  
+    justify-content:space-evenly;
+    height: 400px;
+    width: 100%;
+    transform:rotate(180deg);
+  }
+
+.graphtext{
+    display:flex;  
+    justify-content:space-evenly;
+    margin: 10px 2px;
+}
+.graphtext p{
+    position:relative;
+    top: 10px;
+    left: -20px;
+}
+.graphtext p:nth-child(3){
+    position: relative;
+    left: 10px;
+}
+.graph {
+height:400px;
+}
+
+.graph span{
+display:flex;
+height:40px;
+line-height:40px;
+text-align:right;
+/*   width: 75%; */
+/*   background-color:pink; */
+border-radius: 40px;
+padding: 0 10px;
+box-sizing: border-box;
+color:white;
+transform:rotate(180deg);
+
+}
+.graph.stack1 span{
+background-color:rgb(219, 189, 219);
+height:50%;
+animation:stack1 2s 1;
+}
+.graph.stack2 span{
+background-color:rgb(219, 189, 219);
+height:50%;
+animation:stack2 2s 1;
+}
+.graph.stack3 span{
+background-color:rgb(219, 189, 219);
+height:50%;
+animation:stack3 2s 1;
+}

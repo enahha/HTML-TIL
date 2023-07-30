@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;  display: block; text-align: center;
+        }
+        #inputBox{display: flex; justify-content: center; flex-direction: column; border: 1px solid black; padding: 10px;}
+        input{margin: 5px;}
+        button{ width: 150px;
+                height: 30px;
+                cursor: pointer;
+                margin: 8px 150px;
+                outline: none;
+                background-color: #baabab75;
+                color: rgb(0, 0, 0);
+                box-shadow: 1px 4px 0 rgb(0,0,0,0.5);}
+        #tableBox{margin-top: 30px;}
+        th{padding: 10px 70px; border: 1px silver solid;}
+        td{border: 1px silver solid;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>방명록</h1>
+        <div id="inputBox">
+            <label for="name">이  &nbsp;&nbsp; 름<input type="text" id="name" autofocus></label>
+            <label for="vPlace">방문한 곳 <input type="text" id="place" ></label>
+            <button>기록하기</button>
+        </div>
+        <div id="tableBox">
+            <table>   
+                <thead>
+                    <tr>
+                        <th id="thh">이름</th>
+                        <th>방문한 곳</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let username = document.querySelector('#name');
+        let place = document.querySelector('#place');
+        let recordBtn = document.querySelector('button');
+
+        recordBtn.addEventListener('click', (e) =>{
+            // e.preventDefault();
+            let tbody = document.querySelector('tbody');
+            const el = tag => document.createElement(tag);
+
+            newTr = el('tr');
+
+            let nameTd = el('td');
+            let nameTdText = document.createTextNode(username.value);
+            let placeTd = el('td');
+            let placeTdText = document.createTextNode(place.value);
+
+            if(username.value != '' && place.vale != '' ){    // 둘 다 채워진 칸이라면 아래를 실행
+                nameTd.appendChild(nameTdText);
+                placeTd.appendChild(placeTdText);
+
+                newTr.appendChild(nameTd);
+                newTr.appendChild(placeTd);
+                console.log(newTr);
+
+                tbody.appendChild(newTr);
+
+                username.value = '';
+                place.value = '';
+            } else {                                // 만약 둘 중 하나라도 비워진 칸이 있다먄 alert
+                alert('값을 입력해 주세요.'); 
+                username.value = '';   
+                place.value = '';
+            }
+                })
+    </script>
+</body>
+</html>

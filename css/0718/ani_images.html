@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body::-webkit-scrollbar{
+
+            display: none;      /*스크롤 바 없애는 법*/
+
+        }
+
+        #skillwrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        ul{
+            position: relative;   /*이걸 넣어야지 애니가 움직임*/
+            list-style: none;
+            width: 4000px;
+            height: 350px;
+            animation: slideAni 8s infinite ease-in-out;
+        }
+        li{
+            width: 1000px;
+            height: 350px;
+            float: left;  
+            /*오른쪽으로 붙을 수 있게*/
+        }
+        li:nth-child(1){
+            background: url(./images/679_600+\ Ilustraciones\ De\ Arquitectura\ Ilustraciones\,\ gráficos\ vectoriales\ libres\ de\ derechos\ y\ clip\ art.jpeg);
+            background-size: cover;
+        }
+
+        li:nth-child(2){
+            background: url(/0710/images/muppet.jpeg);
+            background-size: cover;
+        }
+        li:nth-child(3){
+            background: url(./images/woman-g289d7d936_1920.jpg);
+            background-size: cover;
+        }
+        li:nth-child(4){
+            background: url(/포트폴리오_과제/images/luca-nicoletti-O8CHmj0zgAg-unsplash.jpg);
+            background-size: cover;
+        }
+        @keyframes slideAni{     /*from to 도 사용가능*/
+            0%{left: 0px;}
+            25%{left: -1000px;}
+            50%{left: -2000px;}
+            75%{left: -3000px;}
+            100%{left: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

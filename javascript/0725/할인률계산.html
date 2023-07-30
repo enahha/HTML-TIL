@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{width: 350px; height: 300px;}
+        .content{display: flex; justify-content: center;}
+        li{list-style: none; position: relative; top: 90px;}
+        button{ width: 80px;
+                height: 30px;
+                border-radius: 25px;
+                cursor: pointer;
+                margin: 2px 70px;
+                outline: none;
+                background-color: #da3232;
+                color: aliceblue;
+                box-shadow: 1px 4px 0 rgb(0,0,0,0.5);}
+        button:active {
+                box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+                position: relative;
+                top:2px;
+                }
+        .showResult{width: 100%; height:150px; padding: 50px 40%; border-top: #da3232 dotted 5px;}
+        h3{width: 4500px; height: 500px; color: blue;}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="https://blog.kakaocdn.net/dn/NUFli/btq7xTgm81n/mQnImw80nlRQHpZBgYMk3K/img.png" alt="">
+        <form>
+        <ul>
+            <li>
+                <label for="oPrice">원래 가격
+                <input type="text" id="oPrice">원</label>
+            </li>
+            <li>
+                <label for="rate">할인율
+                <input type="text" id="rate"> % </label>
+            </li>
+            <li>
+                <button onclick="showPrice()">계산하기</button>
+            </li>
+        </ul>
+        </form>
+    </div>
+    <!--결과창 출력할 곳-->
+    <div class="showResult"></div>
+
+    <script>
+        function showPrice(){
+            event.preventDefault();     // form tag로 감싸져 있어서 자꾸 새로고침이 된거임. 이럴땐 폼 태그의 기능을 preventDefault()로 없애주자
+            let $orgprice = document.getElementById('oPrice').value;   //oPrice의 값을 가져온다  원래가격
+            let $rate = document.getElementById('rate').value;     //할인율
+            let $saleprice = $orgprice * ($rate/100);       //할인 금액 = 원래가격 * (할인율/100)
+            let result = $orgprice - $saleprice;    //최종가격
+
+            document.querySelector('.showResult').innerHTML= `<h3>상품 원래 가격은 ${$orgprice}원 이고 <br>할인율은 ${$rate}% 입니다.<br>
+                ${$saleprice}원이 할인되어 <strong>${result}원</strong>에 살 수 있습니다.</h3>`;   //innerHTML을 사용해 결과출력
+
+            document.querySelector('input').focus();  //계산 후 focuse가 거기로 간다
+        }
+    </script>
+</body>
+</html>
