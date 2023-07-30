@@ -1,0 +1,134 @@
+
+.family-sit{
+    height: 32px;
+    background-color: #F1F1F2;;
+    display: flex;
+    flex-direction: row;
+    flex
+}
+
+.family-sit-btn {
+  width: 100px;
+  height: 32px;
+  word-break: break-all;
+  text-align: center;
+  line-height: 30px;
+  /* 텍스트 가운데 정렬을 padding을 사용하면 .family-sit로 정해놓은 높이를 해당 div가 벗어나기때문에 line-height로 맞춰주었다. */
+  cursor: pointer;
+}
+
+.family-sit-btn:hover{
+    text-decoration: underline;
+    background-color: #f7f9fbea;
+}
+.family-sit-btn > a{
+    color: black;
+    font-size: 13px
+}
+.family-sit-btn:nth-of-type(1){
+    margin-left: 70px;
+    background-color: white;
+}
+
+/*nav section*/
+.headernav {
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logo_img{
+    width: 200px;
+  }
+.logo_img > img {
+    width: 170px;
+    margin: 12px;
+    padding-left: 25px;
+}
+a {
+  text-decoration: none;
+}
+
+nav {
+  font-family: monospace;
+}
+i{
+  color: #000000;
+}
+
+.nav-menu {
+  background: rgb(255, 255, 255);
+  list-style: none;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+li {
+  color: #c25f5f;
+  background: rgb(255, 255, 255);
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+}
+
+li a {
+  color: #000000;
+}
+/*navbar 요소에 포인터를 놨을 때*/
+li:hover >a, li:hover {
+  color:#61c98d;
+  cursor: pointer;
+}
+/*dropdown안의 글자스타일 조정*/
+.dropdown li:hover, .dropdown li:hover >a {
+  background: #ececec;
+  cursor: pointer;
+  color: #000000;
+}
+
+ul li ul {
+  background-color: #61c98d;
+  min-width: rem;
+  position: absolute;
+  z-index: 1;
+  margin-top: 1rem;
+  left: 0px;
+  display: none;
+  box-shadow:13px 70px  20px rgb(0, 0, 0);
+}
+
+ul li:hover > .dropdown,
+ul li .dropdown:hover {
+  display: block;
+  width: 250px;
+  height: 130px;
+}
+/*dropdown안의 li 요소 스타일*/
+ul li ul li {
+  clear: both;
+  width: 100%;
+  background-color: #fefefe;
+}
+/*네비게이션바 오른쪽 요소*/
+.headernav > .headerrightmenu{
+  position: absolute;
+  right: 40px;
+}
+.headerrightmenu{
+  width: 700px;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+}
+.userinfo {
+  font-size: 14px;
+  margin-top: 29px;
+}
+.headerrightmenu >img{
+  width: 45px;
+  height: 45px;
+  padding: 10px 2px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bluebottle</title>
+    <script src="https://kit.fontawesome.com/334bc39b2b.js" crossorigin="anonymous"></script>
+    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gamja+Flower&family=Poppins&display=swap');
+        *{
+            margin: 0px;
+            padding:0%}
+        .navbar{
+            display: flex;
+            justify-items: end;
+            background-color: rgb(255, 255, 255);
+        }
+        .nav_logo{
+            width: 50px;
+            display: grid;
+            place-items: center;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .navbar_menu{
+            display: flex;
+            flex-direction: row;
+            background-color:rgb(255, 255, 255);
+
+        }
+        .nav_item{
+            padding-top: 20px;
+            padding-left: 30px;
+            list-style: none;
+            font-size: large;
+        }
+        .nav_btn{
+            text-decoration: none;
+            color: gray;
+        }
+        .nav_btn:hover {
+            color: rgb(255, 253, 251);
+            background-color: rgb(95, 92, 226);
+            border-radius: 40px 20px;
+            padding: 3px;
+        }
+
+        .wrap {
+            width: 100%;
+            margin: 10px auto;
+            position: relative;
+        }
+        .wrap img {
+            width: 100%;
+            height: 600px;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+        .smalltxt {
+            position: absolute;
+            top: 45%;
+            left: 62.5%;
+            width: 400PX;
+            text-align: center;
+            /* transform: translate( -20%, -50% ); */
+            font-size: 25px;
+            font-family: 'Bagel Fat One', cursive; font-family: 'Gamja Flower', cursive; font-family: 'Poppins', sans-serif;
+            text-shadow: 1px 1px 4px rgb(125, 124, 124);
+        }
+        .bigtxt{
+            position: absolute;
+            top: 50%;
+            left: 65%;
+            width: 400PX;
+            /* transform: translate( -20%, -50% ); */
+            font-size: 80px;
+            font-family: 'Bagel Fat One', cursive; font-family: 'Gamja Flower', cursive; font-family: 'Poppins', sans-serif;
+            text-shadow: 1px 1px 4px rgb(125, 124, 124);
+        }
+        .main_btn {
+            position: absolute;
+            top: 77.1%;
+            right: 6%;
+        }
+        button{
+            background-color: rgb(234, 242, 249);
+            color:#3e7bc1;
+            border:none;
+            position:relative;
+            height:50px;
+            font-size:18px;
+            padding: 10px;
+            cursor:pointer;
+            transition:800ms ease all;
+            outline:none;
+            border-radius: 15px;
+            box-shadow: 2px 2px ;
+        }
+        button:hover{
+            background:#3e7bc1;
+            color: rgb(234, 242, 249);
+        }
+        i {
+            padding: 15px;
+            ;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션바 -->
+    <nav class="navbar">
+        <div class="nav_logo">
+            <i class="fas fa-sharp fa-solid fa-bottle-droplet fa-xl"></i>        
+        </div>
+
+        <ul class="navbar_menu">
+            <li class="nav_item"><a href="#" class="nav_btn">HOME</a></li>
+            <li class="nav_item"><a href="#" class="nav_btn">CAFE's</a></li>
+            <li class="nav_item"><a href="#" class="nav_btn">MENU</a></li>
+            <li class="nav_item"><a href="#" class="nav_btn">COMPANY</a></li>
+            <li class="nav_item"><a href="#" class="nav_btn">NEWS</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrap">
+        <div class="image">
+            <img src="https://img-cf.kurly.com/shop/data/goodsview/20190911/gv10000061854_1.jpg" alt="" />
+        </div>
+        <div class="text">
+            <div class="smalltxt"><small>simple ㆍ hand drip ㆍ delicious</small></div>
+            <div class="bigtxt"><strong>BLUE<br>BOTTLE</strong></div>
+        </div>
+            <button class="main_btn">Introduction</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="word3"><stron>CONNECT WITH US</stron></div>
+        <br>
+        <i class="fas fa-brands fa-instagram fa-xl"></i>
+        <i class="fas fa-brands fa-facebook fa-lg"></i>
+    </footer>
+</body>
+</html>

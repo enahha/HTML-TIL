@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 120px;
+            margin: 30px;
+        }
+        .box1 {
+            /* boder: 2px solid black; */
+            border-width: 2px;
+            border-style: solid;
+            /*boder style 정리
+                dashed,dotted, doudle,groove,inset,outset */
+            border-color: black;
+        }
+        .box2 {
+            border-width: thick thin;
+            border-color: rebeccapurple;
+            border-style: dashed;
+        }
+        .box1 {
+            border-style: solid;
+            border-top-color: blue;
+            border-width: 5px 20px 1px; /*위, 좌우, 아래*/
+        }
+        .box4 {
+            border-style: outset;
+            border-width: 10px 15px 5px 2px;   /* 시계방향 12시부터(위,우,하,좌)*/
+            border-left-color: aquamarine;
+            border-right-color: brown;
+            border-bottom-color: black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <div class="box5">박스5</div>
+</body>
+</html>
